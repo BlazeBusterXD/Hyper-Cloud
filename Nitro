@@ -1,1 +1,13 @@
 discord.gg/gift/ + random combination of characters
+import random
+import string
+
+def generate_discord_gift_code(length=16):
+    # Discord gift codes typically use letters and numbers
+    chars = string.ascii_letters + string.digits
+    random_code = ''.join(random.choice(chars) for _ in range(length))
+    return f"discord.gg/gift/{random_code}"
+
+# Example usage
+for _ in range(5):
+    print(generate_discord_gift_code())
